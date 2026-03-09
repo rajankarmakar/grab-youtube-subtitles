@@ -249,7 +249,7 @@ async function handleButtonClick() {
   } catch (err) {
     createErrorModal('Could not load subtitles.<br><small>' + err.message + '</small>');
   } finally {
-    subtitleButton.textContent = 'Subtitles';
+    subtitleButton.textContent = 'Grab Subtitles';
     subtitleButton.disabled = false;
   }
 }
