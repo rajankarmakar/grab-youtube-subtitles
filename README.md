@@ -21,3 +21,8 @@ Copy or Download subtitles from youtube for Creators, Translators, Language Lear
 ### Formats for downloading YouTube subs:
 SRT — Subtitle file with timestamps <br>
 TXT — Flexible plain text format
+
+You can contact developer via:
+- Email: rajankarmakar2@gmail.com
+- LinkedIn: https://www.linkedin.com/in/rajankarmakar24x7
+- Website: https://rajankarmaker.com/contact
