@@ -11,13 +11,13 @@ Displays subtitle timestamps and allows you to download them in TXT or SRT forma
 4. Download youtube subtitles
 
 ## Features
-Formats: SRT and TXT file.
-⬇️ Download YouTube subtitles
+Formats: SRT and TXT file. <br>
+⬇️ Download YouTube subtitles <br>
 📋 Copy YouTube caption to clipboard
 
 ## Who Is It For?
 Copy or Download subtitles from youtube for Creators, Translators, Language Learners, Students & Educators.
 
 ### Formats for downloading YouTube subs:
-SRT — Subtitle file with timestamps
+SRT — Subtitle file with timestamps <br>
 TXT — Flexible plain text format
