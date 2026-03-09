@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grab YouTube Subtitles</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 280px;
+      background: #0e0e0d;
+      color: #d4d4cc;
+      font-family: 'IBM Plex Mono', monospace, sans-serif;
+      border: 1px solid #2a2a2a;
+    }
+
+    .header {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid #1e1e1e;
+      background: #111110;
+    }
+
+    .logo {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #facc15;
+    }
+
+    .tagline {
+      font-size: 10px;
+      color: #fff;
+      letter-spacing: 0.08em;
+      margin-top: 3px;
+      text-transform: uppercase;
+    }
+
+    .body {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #666;
+      letter-spacing: 0.06em;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #333;
+      flex-shrink: 0;
+    }
+
+    .status-dot.active { background: #4ade80; box-shadow: 0 0 6px #4ade8066; }
+    .status-dot.inactive { background: #555; }
+
+    #status-text { color: #888; }
+
+    .video-info {
+      background: #161615;
+      border: 1px solid #222;
+      border-radius: 5px;
+      padding: 12px 14px;
+    }
+
+    .video-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    #video-title {
+      font-size: 11px;
+      color: #aaa;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .action-btn {
+      width: 100%;
+      padding: 11px;
+      font-family: 'IBM Plex Mono', monospace, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      transition: all 0.15s;
+    }
+
+    #grab-btn {
+      background: #facc15;
+      color: #0a0900;
+    }
+    #grab-btn:hover { background: #fde047; }
+    #grab-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .footer {
+      padding: 12px 20px;
+      border-top: 1px solid #1a1a18;
+      font-size: 9px;
+      color: #fff;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .not-youtube {
+      padding: 24px 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1.7;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">⬛ Grab Subtitles</div>
+    <div class="tagline">YouTube Subtitles Grabber</div>
+  </div>
+
+  <div id="main-content">
+    <div class="body">
+      <div class="status-row">
+        <div class="status-dot" id="status-dot"></div>
+        <span id="status-text">Checking…</span>
+      </div>
+      <div class="video-info" id="video-info" style="display:none">
+        <div class="video-label">Current Video</div>
+        <div id="video-title">—</div>
+      </div>
+      <button class="action-btn" id="grab-btn" disabled>Grab Subtitles</button>
+    </div>
+  </div>
+
+  <div id="not-yt" class="not-youtube" style="display:none">
+    Navigate to a YouTube<br>video to use Grab YouTube Subtitles.
+  </div>
+
+  <div class="footer">Powered by YouTube Transcript API</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
